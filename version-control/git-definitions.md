@@ -13,3 +13,5 @@ commit creates a save point on the coding timeline that we could revisit later. 
 
 * What is a merge conflict?
 A merge conflict happens when two or more different changes have been made to the same part of a file and the branches were merged with the master branch. When this happens git doesn't know which change to use and marks the part as a conflict.
+
+Hey Tyler :)
