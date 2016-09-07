@@ -1,0 +1,22 @@
+#image1 {
+margin: 175px 120px 30px 450px;
+z-index: 1;
+position: absolute;
+
+}
+
+#image2 {
+margin: 90px 180px 70px 430px;
+z-index: 2;
+position: absolute;
+
+}
+
+
+#image3 {
+margin: 273px 125px 50px 493px;
+z-index: 2;
+position: absolute;
+
+
+}
