@@ -1,0 +1,45 @@
+Release 0: Equip Your New Robot
+
+- Stand infront of the elevator door.
+- Using one of your fingers press the button located next to the elevator door.
+- Until the elevator door opens:
+    -wait.
+- If the elevator door opens and someone is inside
+    - wait until they leave the elevator
+    - walk 2 steps past the elevator door
+- If the elevator door opens and nobody is inside
+    - walk 2 steps past the elevator door
+- Turn around to face the elevator door
+-Until the elevator door closes:
+     - wait
+- When the elevator door closes:
+     - Press the one of the button located next to the door with the number that matches the number of the floor you were asked to go to.
+- until the elevator door opens:
+     - wait
+when the elevator door opens:
+     - wake 2 steps past the elevator door 
+  
+
+Release 1: Checking My Email
+
+- turn on my laptop
+    - press the power button
+- sign in to windows
+    - click on the password field
+    - enter my password
+- wait for a few seconds for windows to be ready
+- click on the google chrome icon
+- wait for the google chrome browser to open
+- enter the url http://gmail.com in the address bar
+- log in to my email account
+   - enter my email in the email field
+   - enter my password in the password field
+- click on the title of an unread email
+- read the unread email
+- click on the next button
+- If the next email is an unread email
+    - read it
+    - click on the next button
+- If the next email is a read email
+    - close the google chrome browser
+
