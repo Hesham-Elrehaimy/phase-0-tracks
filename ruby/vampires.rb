@@ -1,4 +1,10 @@
-puts "what is your name?"
+puts "How many employees will be processed?"
+applicants = gets.chomp
+
+while applicants.to_i > 0
+
+		
+puts "What is your name?"
 name = gets.chomp
 
 puts "How old are you?"
@@ -13,7 +19,10 @@ garlic_bread = gets.chomp
 puts "Would you like to enroll in the company’s health insurance? (yes/no)"
 insurance = gets.chomp
 
+
 current_year = 2016
+
+
 
 if 
 	name === "Drake Cula" || name === "Tu Fang"
@@ -33,5 +42,13 @@ else
 
 end
 
+
 puts result
+
+applicants = applicants.to_i - 1	
+
+
+end
+
+
 
