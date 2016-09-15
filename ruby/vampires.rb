@@ -3,7 +3,7 @@ applicants = gets.chomp
 
 while applicants.to_i > 0
 
-		
+    
 puts "What is your name?"
 name = gets.chomp
 
@@ -26,8 +26,8 @@ allergies = gets.chomp
 until allergies == "done"
     case
     when allergies == "sunshine"
-      puts "Probably a vampire."
-    break 
+      return result = "Probably a vampire."
+    
       
     else   
         puts "Any other allergies?"
@@ -44,30 +44,31 @@ current_year = 2016
 case 
 
 when name == "Drake Cula" || name == "Tu Fang"
-  puts "Definitely a vampire."
+  result = "Definitely a vampire."
   break
 when !(age.to_i == current_year.to_i - birth_year.to_i) && garlic_bread == "no" && insurance == "no"
-  puts "Almost certainly a vampire."  
+  result = "Almost certainly a vampire."  
   break
   
 when !(age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "no" || insurance == "no")
-  puts  "Probably a vampire."  
+  result =  "Probably a vampire."  
   break
 when (age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
-  puts  "Probably not a vampire."  
+  result = "Probably not a vampire."  
   break
 
 else
-puts  "Results inconclusive."    
+result = "Results inconclusive."    
 
 end  
 
 
 
-applicants = applicants.to_i - 1	
+applicants = applicants.to_i - 1  
 
 
 end
 
+puts result
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
