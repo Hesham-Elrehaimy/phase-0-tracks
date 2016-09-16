@@ -1,4 +1,3 @@
-
 puts "How many employees will be processed?"
 applicants = gets.chomp
 
