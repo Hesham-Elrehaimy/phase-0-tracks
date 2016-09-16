@@ -1,9 +1,11 @@
 puts "How many employees will be processed?"
 applicants = gets.chomp
 
-while applicants.to_i > 0
+current_year = 2016
 
-    
+while 
+  applicants.to_i > 0
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -23,52 +25,62 @@ puts "Type any allergies you have one at a time and type done at the end"
 
 allergies = gets.chomp
 
-until allergies == "done"
-    case
-    when allergies == "sunshine"
-      return result = "Probably a vampire."
-    
+
+vampire = false
+until
+   vampire
+     if 
+        allergies == "sunshine"
+        puts "probably a vampire."
+        vampire = true
       
-    else   
+     elsif
+        allergies == "done"
+        vampire = true
+      
+     else
         puts "Any other allergies?"
         allergies = gets.chomp
-    end    
-    
-end  
-
-
-current_year = 2016
-
-
-
-case 
-
-when name == "Drake Cula" || name == "Tu Fang"
-  result = "Definitely a vampire."
-  break
-when !(age.to_i == current_year.to_i - birth_year.to_i) && garlic_bread == "no" && insurance == "no"
-  result = "Almost certainly a vampire."  
-  break
+      
+      
+     end 
   
-when !(age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "no" || insurance == "no")
-  result =  "Probably a vampire."  
-  break
-when (age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
-  result = "Probably not a vampire."  
-  break
-
-else
-result = "Results inconclusive."    
-
-end  
-
-
-
-applicants = applicants.to_i - 1  
-
+  
 
 end
 
-puts result
+
+if !(allergies == "sunshine")
+
+
+  if
+    name.downcase == "drake cula" || name.downcase == "tu fang"
+    puts "Definitely a vampire." 
+
+  elsif
+    !(age.to_i == current_year.to_i - birth_year.to_i) && garlic_bread == "no" && insurance == "no"
+    puts "Almost certainly a vampire."
+
+  elsif
+    !(age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
+    puts  "Probably a vampire."
+
+  elsif
+    (age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
+    puts  "Probably not a vampire."
+
+
+
+
+  else
+    puts  "Results inconclusive." 
+  end
+
+end
+  
+
+  applicants = applicants.to_i - 1 
+
+end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
