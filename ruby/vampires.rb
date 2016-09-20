@@ -1,4 +1,4 @@
-puts "How many employees will be processed?"
+puts "How many employees would you like to process?"
 applicants = gets.chomp
 
 current_year = 2016
