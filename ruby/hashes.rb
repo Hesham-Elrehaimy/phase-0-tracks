@@ -17,6 +17,10 @@ client[:children] = children
 puts "What decor theme does the client prefer?"
 decor_theme = gets.chomp
 client[:decore_theme] = decor_theme
+puts "What kind of rooms does the client want?"
+rooms = gets.chomp
+rooms = []
+clien[:rooms] = rooms.split
 #turn the user's answer into a bolean
 puts "Does the client require child proofing? (yes/no)"
 child_proof = gets.chomp
