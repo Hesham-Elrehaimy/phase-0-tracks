@@ -1,6 +1,6 @@
 class Santa
 
-	attr_reader :age, :ethnicity, :reindeer_ranking
+	attr_reader :ethnicity, :reindeer_ranking
 	attr_accessor :gender, :age 
 
 	def speak
@@ -59,7 +59,7 @@ i = 1
 
 santas.each do |santa|
      santa.age = rand(140)
-	puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
+	puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} years old and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
 i += 1
 end
 
