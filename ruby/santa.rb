@@ -7,25 +7,25 @@ class Santa
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	 end
      
-    def eat_milk_and_cookies(cookie)
+  def eat_milk_and_cookies(cookie)
     	puts "That was a good #{cookie}!"     	
-     end
+    end
 
-    def initialize(gender, ethnicity)
+  def initialize(gender, ethnicity)
     	puts "Initializing Santa instance ..." 
     	@gender = gender    	
     	@ethnicity = ethnicity
     	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     	@age = 0
-     end 
+    end 
 
-    def celebrate_birthday
+  def celebrate_birthday
     	
     	@age = @age + 1
    	
     end
 
-    def get_mad_at(reindeer)
+  def get_mad_at(reindeer)
 
     	@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer)))
     	
@@ -59,8 +59,8 @@ i = 1
 
 santas.each do |santa|
      santa.age = rand(140)
-	puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} years old and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
-i += 1
+	   puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} years old and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
+  i += 1
 end
 
 
