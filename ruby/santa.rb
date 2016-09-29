@@ -1,5 +1,8 @@
 class Santa
 
+	attr_reader :age, :ethnicity, :reindeer_ranking
+	attr_accessor :gender, :age 
+
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	 end
@@ -16,17 +19,51 @@ class Santa
     	@age = 0
      end 
 
+    def celebrate_birthday
+    	
+    	@age = @age + 1
+   	
+    end
+
+    def get_mad_at(reindeer)
+
+    	@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer)))
+    	
+    end
+
+
+
 end
 
-# clause = Santa.new
+claus = Santa.new("male", "white")
+claus.speak
+claus.eat_milk_and_cookies("Oreo")
+claus.celebrate_birthday
+claus.get_mad_at("Vixen")
+puts "claus is #{claus.ethnicity} and he is #{claus.age} years old"
+claus.gender = "female"
 
-# clause.speak
-
-# clause.eat_milk_and_cookies("Oreo")
+p claus
 
 santas = []
+
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+
+100.times do 
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
+
+
+i = 1
+
+santas.each do |santa|
+     santa.age = rand(140)
+	puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
+i += 1
+end
+
+
+
+
+
