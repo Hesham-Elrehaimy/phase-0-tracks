@@ -23,15 +23,16 @@ class Game
 	def initialize(word)
 
 		@word = word
-		@guess_count = 0
-		@is_over = false
-
 	end
 
-	def to_dashes(letter)
-
-		@letter = letter
+	def dasher
+		dashed_word = '-' * @word.length
+		dashed_word
+	end	
 
 
 
 end		
+
+game = Game.new('hesham')
+p game.dasher
