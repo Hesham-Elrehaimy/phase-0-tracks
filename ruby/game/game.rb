@@ -47,7 +47,7 @@ class Game
         @letters.each do |char| 
             @guesses[char] += 1
         end
-       @guesses
+       
     end     
 
 
@@ -55,6 +55,7 @@ class Game
         if @word.include? letter
             @guess_count += 1 
             @dashed_word[@word.index(letter)] = @word[@word.index(letter)]
+               
             @dashed_word
         else
             @guess_count += 1 
@@ -63,44 +64,63 @@ class Game
       
     end 
 
+#     def compare(letter)
+#      @word.include? letter
+#      @guess_count += 1
+
+#     end
+    
+#     def replace(x) 
+#         #iterate through @word
+#         #every letter that matches x, gets assigned to same index in  @dashed_word.
+#         @word.each_char do |y|
+#                 if y == x            
+#                 @dashed_word[@word.index(y)] = @word[@word.index(y)]
+#                 @dashed_word
+#             end
+#                     end    
+#     end                
+
 
     
 
 end 
-game = Game.new('hesham')
-game.storing_guesses('s')
-p game.guesses_hash
 
-# puts "Player1: Enter a word for player2 to guess:"
-# word = gets.chomp
-# game = Game.new(word)
-# puts game.dasher
-# while game.guess_count < game.word.length
-#     puts "player2: Enter a letter to guess player1's word (You have #{(game.word.length).to_i - (game.guess_count).to_i} guesses):"
-#     # letters = []
-    
+# game = Game.new('hesham')
+# game.storing_guesses('s')
+# p game.guesses_hash
 
-#     letter = gets.chomp
-# #     letters << letter
-# #     guesses = Hash.new(0)
-# # letters.each{ |e| guesses[e] += 1 }  
-   
-#    if game.compare(letter)
-#     puts game.dashed_word
-#    # elsif
-#    #  guesses[:e] > 1
-#    #  game.guess_count += 0
-#    else
-#     puts game.dashed_word
-#    end
-# end   
+puts "Player1: Enter a word for player2 to guess:"
+word = gets.chomp
+game = Game.new(word)
+puts game.dasher
+ 
+while game.guess_count < game.word.length
+    puts "player2: Enter a letter to guess player1's word (You have #{(game.word.length).to_i - (game.guess_count).to_i} guesses):"
+    character = gets.chomp
+ game.storing_guesses(character)
+  game.guesses_hash 
 
-# if game.dashed_word == game.word
+   if
+    game.guesses[character] > 1
+   puts game.dashed_word
+    elsif game.compare(character)
+        
+    puts game.dashed_word
+   else
+    puts game.dashed_word
+   end
+end   
 
-#     puts "Congratulations. You've guessed the word correctly."
-# else
-#     puts "*In Eric Cartman's voice* Nana nananana! Haha hahahaha! You couldn't guess the word."
-# end        
+if game.dashed_word == game.word
+
+    puts "Congratulations. You've guessed the word correctly."
+else
+    puts "*In Eric Cartman's voice* Nene nenenene! Hehe hehehehe! You couldn't guess the word."
+end        
+
+p game.guesses
+p game.letters
 
 #  # game = Game.new('hesham')
  
