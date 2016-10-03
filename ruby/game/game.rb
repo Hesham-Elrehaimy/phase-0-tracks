@@ -1,3 +1,6 @@
+# I wasn't able to find a way to deal with tha case of player1 entering a word with repeated letter.
+# The method that makes double counts don't count works, but I doesn't pass the test because it returns bigger numbers than I want it to return.
+
 # CLASS:
 # Game
 
@@ -64,31 +67,9 @@ class Game
       
     end 
 
-#     def compare(letter)
-#      @word.include? letter
-#      @guess_count += 1
-
-#     end
-    
-#     def replace(x) 
-#         #iterate through @word
-#         #every letter that matches x, gets assigned to same index in  @dashed_word.
-#         @word.each_char do |y|
-#                 if y == x            
-#                 @dashed_word[@word.index(y)] = @word[@word.index(y)]
-#                 @dashed_word
-#             end
-#                     end    
-#     end                
-
-
-    
-
 end 
 
-# game = Game.new('hesham')
-# game.storing_guesses('s')
-# p game.guesses_hash
+
 
 puts "Player1: Enter a word for player2 to guess:"
 word = gets.chomp
@@ -119,14 +100,4 @@ else
     puts "*In Eric Cartman's voice* Nene nenenene! Hehe hehehehe! You couldn't guess the word."
 end        
 
-p game.guesses
-p game.letters
-
-#  # game = Game.new('hesham')
- 
-#  # puts game.dasher
- 
-#  # puts game.compare('h')
-
-#  # puts game.guess_count
 
