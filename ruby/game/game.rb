@@ -100,4 +100,4 @@ else
     puts "*In Eric Cartman's voice* Nene nenenene! Hehe hehehehe! You couldn't guess the word."
 end        
 
-
+p game.guesses_hash
