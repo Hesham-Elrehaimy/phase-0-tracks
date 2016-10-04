@@ -1,8 +1,6 @@
 puts "How many employees would you like to process?"
 applicants = gets.chomp
 
-current_year = 2016
-
 while 
   applicants.to_i > 0
 
@@ -58,15 +56,15 @@ if !(allergies == "sunshine")
     puts "Definitely a vampire." 
 
   elsif
-    !(age.to_i == current_year.to_i - birth_year.to_i) && garlic_bread == "no" && insurance == "no"
+    !(age.to_i == Time.now.year - birth_year.to_i) && garlic_bread == "no" && insurance == "no"
     puts "Almost certainly a vampire."
 
   elsif
-    !(age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
+    !(age.to_i == Time.now.year - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
     puts  "Probably a vampire."
 
   elsif
-    (age.to_i == current_year.to_i - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
+    (age.to_i == Time.now.year - birth_year.to_i) && (garlic_bread == "yes" || insurance == "yes")
     puts  "Probably not a vampire."
 
 
