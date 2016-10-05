@@ -108,4 +108,3 @@ console.log(common({name:"Hesham", age:31},{name:"Moamen", years:31})); //should
 
 console.log(common({name:"Hesham", education:"Business", interest:"Soccer"},{name:"Moamen", education:"Pharmacy", interest:"Classical Piano"})); //should print 'false'
 
-console.log(co)
