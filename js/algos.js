@@ -21,22 +21,26 @@ function longestString(array) {
 
 function common(obj1,obj2) {
 
-for (var prop1 in obj1) {
+	for (var prop1 in obj1) {
 	
-	}
-	for (var prop2 in obj2) {
 	
-	}
-	
-	if ((prop1 == prop2)  && (obj1[prop1] == obj2[prop2])) {
+		for (var prop2 in obj2) {
+		
+			if ((prop1 == prop2)  && (obj1[prop1] == obj2[prop2])) {
 
-		return true;
-	}
+			   return true;
+	        }
 
 	 
-	else {
-	    return false;	
-	}
+		    else {
+		
+	            return false;
+	        }
+	    }
+	
+    }
+	
+
 }
 
 // Write a function that: 
@@ -51,9 +55,14 @@ for (var prop1 in obj1) {
 
 
 //Input: an integer
-// create an empty array 
-// create random words (minimum 1 letter and maximum 10 letters)
-  //  
+
+// create a function which creates a random string (minimum 1 letter and maximum 10 letters)
+  // Iterates through the alphabet
+  // assign the letters to an empty array
+  // join the elements of the array together and turn it to a string
+// create a funtion which stores the random strings in an array
+  //Use a loop to assign the outcome of the string function into an array
+  //return the array
 
 //Output: an array which contains as many strings as the integer given.
 
@@ -61,20 +70,20 @@ function string() {
 
 var alpha = 'abcdefghijklmnopqrstuvwxyz';
 
-var x = [];
+var randomWord = [];
 
 
 
 for (var i = 0; i < Math.floor((Math.random() * 10) + 1); i++) {
 	
-	x[i] = alpha[Math.floor((Math.random() * 26))];
+	randomWord[i] = alpha[Math.floor((Math.random() * 26))];
 	
 
 
     
 }
 
-	return x.join('').toString();
+	return randomWord.join('').toString();
 }
     
 
@@ -82,14 +91,14 @@ for (var i = 0; i < Math.floor((Math.random() * 10) + 1); i++) {
 
 function randomArray(integer) {
 	
-	y = [];
+	wordsArray = [];
 	
 	for (var i = 0; i < integer; i++) {
 		
-		y[i] = string();
+		wordsArray[i] = string();
 		
 	}
-return y;
+return wordsArray;
 	
 }
 
@@ -100,6 +109,7 @@ console.log(longestString(['Marlon Brando', 'Al Pacino', 'James Caan', 'Robert D
 
 console.log(longestString(['Soccer', 'Football', 'Basketball', 'Squash', 'tennis'])); //should print 'Basketball'
 
+
 console.log(common({name:"Hesham", age:31},{name:"Moamen", age:31})); //should print 'true'
 
 console.log(common({name:"Hesham", age:31},{name:"Hesham", age:19})); //should print 'true'
@@ -107,4 +117,15 @@ console.log(common({name:"Hesham", age:31},{name:"Hesham", age:19})); //should p
 console.log(common({name:"Hesham", age:31},{name:"Moamen", years:31})); //should print 'false'
 
 console.log(common({name:"Hesham", education:"Business", interest:"Soccer"},{name:"Moamen", education:"Pharmacy", interest:"Classical Piano"})); //should print 'false'
+
+for (i = 0; i < 10; i++) {
+
+    randomWordsArray = randomArray(7)
+    console.log(randomWordsArray);
+	console.log(longestString(randomWordsArray));
+}
+
+
+
+
 
