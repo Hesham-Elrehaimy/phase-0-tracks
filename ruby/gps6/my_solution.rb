@@ -126,3 +126,14 @@ alabama.report
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  #In one instance a string was used for the key, and in the other a symbol was used.
+# What does require_relative do? How is it different from require?
+  #It allows us to use data from another file located in same directory. The require is different because it could search outside of the directory and could also be used to incorporate a module or gem from outside of the file.
+# What are some ways to iterate through a hash?
+  #using .each |key, value|. 
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  #They were unnecessarily repeated and in some cases unnecessarily used.
+# What concept did you most solidify in this challenge?
+  #Iterating through a hash. Constant variables. The difference between require and require_relative. How a class works. New ways to refactor.
