@@ -21,24 +21,35 @@ function longestString(array) {
 
 function common(obj1,obj2) {
 
-	for (var prop1 in obj1) {
-	
-	
-		for (var prop2 in obj2) {
-		
-			if ((prop1 == prop2)  && (obj1[prop1] == obj2[prop2])) {
+	for (var i = 0; i < obj1.length; i++ ) {
 
-			   return true;
-	        }
 
-	 
-		    else {
+		for (var prop in obj1) {
+    // return obj1[prop]
+			 
+		}
+
 		
-	            return false;
-	        }
-	    }
+		
+			for (var prop in obj2) {
+				// return obj2[prop]
+		}
+
+	}			
+			
+				if (obj1[prop] == obj2[prop]) {
+
+				   return true;
+		        }
+
+		 
+			    else {
+			
+		            return false;
+		        }
+	    
 	
-    }
+    
 	
 
 }
