@@ -1,5 +1,3 @@
-
-
 #define the next_letter method which will be used to turn real names into fake ones and give it "name" as a parameter.
 def next_letter(name)
 #declare a variable to store an array which contains all the consonants in it.
@@ -115,5 +113,3 @@ while
     i += 1 
 #close the loop.    
 end    
-   
-
