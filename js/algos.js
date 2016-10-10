@@ -16,52 +16,38 @@ function longestString(array) {
 }
 
 //iterate through both objects
-//have the function return true if the key and the value both match in both objects
+//store the key value pairs in arrays
+// return true if key value pairs in first array match a key value pair in second array
 
 
 function common(obj1,obj2) {
 
-	for (var i = 0; i < obj1.length; i++ ) {
+var arr1 = [];
+var arr2 = [];
 
-
-		for (var prop in obj1) {
-    // return obj1[prop]
-			 
-		}
-
-		
-		
-			for (var prop in obj2) {
-				// return obj2[prop]
-		}
-
-	}			
-			
-				if (obj1[prop] == obj2[prop]) {
-
-				   return true;
-		        }
-
-		 
-			    else {
-			
-		            return false;
-		        }
-	    
-	
-    
-	
-
+	for (var prop in obj1) {
+	arr1.push([prop, obj1[prop]]);
 }
 
-// Write a function that: 
-     // takes an integer for length,
-     // builds and returns an array of strings of the given length.
-// So if we ran your function with an argument of 3, we would get an array of 3 random words back
-// (the words don't have to be actual sensical English words -- "nnnnfph" totally counts).
-// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters.
-// (This involves a new trick, generating a random number, that you'll have to look up, 
-// but the solution on how to do so is relatively straightforward.)
+for (var prop in obj2) {
+arr2.push([prop, obj2[prop]]);
+}
+
+for (var i =0; i < arr1.length; i++) {
+	if (arr1[i].toString() == arr2[i].toString()) {
+		
+		return true;
+		
+	} else {
+		
+		return false;
+	}
+}
+        	
+    
+}
+
+
 
 
 
@@ -121,13 +107,13 @@ console.log(longestString(['Marlon Brando', 'Al Pacino', 'James Caan', 'Robert D
 console.log(longestString(['Soccer', 'Football', 'Basketball', 'Squash', 'tennis'])); //should print 'Basketball'
 
 
-console.log(common({name:"Hesham", age:31},{name:"Moamen", age:31})); //should print 'true'
+console.log(common({name:"Hesham", age:31}, {name:"Moamen", age:31})); //should print 'true', but keeps returning false
 
-console.log(common({name:"Hesham", age:31},{name:"Hesham", age:19})); //should print 'true'
+console.log(common({name:"Hesham", age:31}, {name:"Hesham", age:19})); //should print 'true'
 
-console.log(common({name:"Hesham", age:31},{name:"Moamen", years:31})); //should print 'false'
+console.log(common({name:"Hesham", age:31}, {name:"Moamen", years:31})); //should print 'false'
 
-console.log(common({name:"Hesham", education:"Business", interest:"Soccer"},{name:"Moamen", education:"Pharmacy", interest:"Classical Piano"})); //should print 'false'
+console.log(common({name:"Hesham", education:"Business", interest:"Soccer"}, {name:"Moamen", education:"Pharmacy", interest:"Classical Piano"})); //should print 'false'
 
 for (i = 0; i < 10; i++) {
 
