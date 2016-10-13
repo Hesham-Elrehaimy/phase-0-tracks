@@ -18,6 +18,7 @@ hash.each do |key, value|
 	puts "The best role for #{key} was in the movie #{value.ord}."
 end
 
+# #1
 array.delete_if do |fruit|
 	fruit < 6
 end
@@ -25,11 +26,12 @@ end
 p array
 
 hash.delete_if do |key|
-hash[key].length < 13
+	hash[key].length < 13
 end
 
 p hash
 
+# #2
 array.keep_if do |x|
 	x >= 6
 end
@@ -42,6 +44,8 @@ end
 
 p hash
 
+# #3
+
 array.select! do |x|
 	x > 6
 end
@@ -52,6 +56,7 @@ hash.select! do |key|
 	hash[key].length > 13
 end
 
+# #4
 p hash
 
 array.reject! do |x|
