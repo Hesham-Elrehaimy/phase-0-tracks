@@ -40,7 +40,7 @@ p clause.ethnicity
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 i = 1
-until i > 100 
+100.times do 
 	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
 	santa.age = rand(140)
 	puts "Santa number #{i} is a #{example_ethnicities.sample} #{example_genders.sample}. This santa is #{santa.age} years old and has reindeers named #{santa.reindeer_ranking} ordered from most to least favorite."
