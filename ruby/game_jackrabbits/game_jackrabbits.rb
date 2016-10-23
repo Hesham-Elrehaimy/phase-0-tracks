@@ -47,19 +47,19 @@ class Game
 	end	
 end	
 
-# puts "Player1: Enter a word for player2 to guess:"
-# player1_word = gets.chomp 
-# game = Game.new(player1_word)
-# puts game.progress_tracker(player1_word)
+puts "Player1: Enter a word for player2 to guess:"
+player1_word = gets.chomp 
+game = Game.new(player1_word)
+puts game.progress_tracker(player1_word)
 
-# until game.word_to_guess == game.answer_progress || game.guesses_count == game.word_to_guess.length
-# 	puts "Player2: Enter a letter to start guessing player1's word. You have #{game.word_to_guess.length - game.guesses_count} guess(es) left:"
-# 	player2_guess = gets.chomp
-# 	puts game.compare_letter(player2_guess)
-# end	
+until game.word_to_guess == game.answer_progress || game.guesses_count == game.word_to_guess.length
+	puts "Player2: Enter a letter to start guessing player1's word. You have #{game.word_to_guess.length - game.guesses_count} guess(es) left:"
+	player2_guess = gets.chomp
+	puts game.compare_letter(player2_guess)
+end	
 
-# if game.word_to_guess == game.answer_progress
-# 	puts "Congratulations! You've guessed the word correctly."
-# else 
-# 	puts "Hahahahaha you couldn't guess player1's word."	
-# end
+if game.word_to_guess == game.answer_progress
+	puts "Congratulations! You've guessed the word correctly."
+else 
+	puts "Hahahahaha you couldn't guess player1's word."	
+end
