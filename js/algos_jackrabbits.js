@@ -77,7 +77,7 @@ console.log(longestString(['Marlon Brando', 'Al Pacino', 'James Caan', 'Robert D
 console.log(longestString(['Soccer', 'Football', 'Basketball', 'Squash', 'tennis'])); //should print 'Basketball'
 
 //release 1 driver code
-console.log(common({name:"Hesham", age:31}, {name:"Moamen", age:31})); //should print 'true', but keeps returning false
+console.log(common({name:"Hesham", age:31}, {name:"Moamen", age:31})); //should print 'true'
 
 console.log(common({name:"Hesham", age:31}, {name:"Hesham", age:19})); //should print 'true'
 
