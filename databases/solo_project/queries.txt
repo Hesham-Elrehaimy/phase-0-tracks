@@ -1,3 +1,5 @@
+Release 2:
+
 1. 
 command:
 SELECT * FROM employees;
@@ -53,3 +55,49 @@ output:
 5.
 command:
 DELETE FROM employees WHERE id=1;
+
+Release 3:
+
+1. Inner join:
+command:
+SELECT employees.id, employees.name, departments.name FROM employees INNER JOIN departments ON departments.id = employees.department_id;
+
+output:
+2|Moamen Abdelaziz|Marketing
+3|Hatem Elhassan|Production
+4|Adham Mokhtar|R&D
+5|Eiman Abdelmoneim|I.T.
+6|Tarek Mansor|Marketing
+7|Ehab Khalifa|R&D
+8|Hesham Elrehaimy|I.T.
+9|Ahmad Assem|Production
+10|Ahmad Elgendy|Human Resources
+
+2. left join:
+command:
+SELECT employees.id, employees.name, departments.name FROM employees LEFT JOIN departments ON departments.id = employees.department_id;
+
+output:
+2|Moamen Abdelaziz|Marketing
+3|Hatem Elhassan|Production
+4|Adham Mokhtar|R&D
+5|Eiman Abdelmoneim|I.T.
+6|Tarek Mansor|Marketing
+7|Ehab Khalifa|R&D
+8|Hesham Elrehaimy|I.T.
+9|Ahmad Assem|Production
+10|Ahmad Elgendy|Human Resources
+
+3. right join:
+command:
+SELECT employees.id, employees.name, departments.name FROM employees RIGHT JOIN departments ON departments.id = employees.department_id;
+
+output:
+Not supported by sqlite
+
+4. full join:
+command:
+SELECT employees.id, employees.name, departments.name FROM employees FULL JOIN departments ON departments.id = employees.department_id;
+output:
+Not supported by sqlite
+
