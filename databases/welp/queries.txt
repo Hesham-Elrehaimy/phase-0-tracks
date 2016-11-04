@@ -1,0 +1,24 @@
+1. join 3 tables
+command:
+SELECT * FROM users, businesses, reviews WHERE reviews.user_id = users.id AND reviews.business_id = businesses.id;
+
+output:
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapal|1|4|Great venue|1|1
+2|Mandy|Kaling|2|Amir's Towing|2|2|Arrived slow and was rude|2|2
+3|Angela|Jolie|3|The Beagle Nightclub|3|5|Best nightclub in town!|3|3
+4|Steven|Wonder|4|Lotus Yoga|4|3|It was okay|4|4
+
+2. select relative data only
+command:
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM users, businesses JOIN reviews ON reviews.user_id = users.id AND reviews.business_id = businesses.id;
+output:
+Bradford|Pitt|Grundy Hollow Wedding Chapal|4|Great venue
+Mandy|Kaling|Amir's Towing|2|Arrived slow and was rude
+Angela|Jolie|The Beagle Nightclub|5|Best nightclub in town!
+Steven|Wonder|Lotus Yoga|3|It was okay
+
+3. view the data of all three tables for just one particular business
+command:
+ SELECT * FROM users, businesses, reviews WHERE reviews.business_id=1 AND businesses.id=1 AND users.id=1;
+output:
+1|Bradford|Pitt|1|Grundy Hollow Wedding Chapal|1|4|Great venue|1|1
