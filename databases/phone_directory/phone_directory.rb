@@ -76,7 +76,7 @@ elsif command == "edit"
 		elsif info == "family"
 			puts "Please type the new status:"
 			new_status = gets.chomp
-			edit_contact(db, full_name, "name", info, new_email)	
+			edit_contact(db, full_name, "name", info, new_status)	
 		else 
 			puts "invalid information"
 		end	
