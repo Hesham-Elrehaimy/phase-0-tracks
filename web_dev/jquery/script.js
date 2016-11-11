@@ -27,9 +27,9 @@ $(document).ready(function(){
 	   $("#q3a1").click(function(){
         $("#q3a1").after("<br>Correct!");
     });
-	   $("#q3a2").click(function(){
         $("#q3a2").after("<br>Wrong answer!");
-    });	   
+    });	   	   $("#q3a2").click(function(){
+
 	   $("#q3a3").click(function(){
         $("#q3a3").after("<br>Wrong answer!");
     });

@@ -6,4 +6,4 @@ before:
 
 after:
 - The tutorial at ```http://www.w3schools.com/jquery/default.asp``` was very helpful.
-- 
+- Testing the methods and trying to discover different ways they could be applied was helpful too.
