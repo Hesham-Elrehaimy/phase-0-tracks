@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require 'sinatra/reloader' if development?
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -44,3 +45,33 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+get '/contact' do
+  "1033 W Van Buren St, Chicago, IL 60607"
+end
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{params[:name]}!"
+  else
+    "Good job!"
+  end
+end
+
+get '/:num1/plus/:num2' do
+  (params[:num1].to_i + params[:num2].to_i).to_s
+end
+
+#Tried to do the bonus question, but couldn't figure it out
+# get '/students/:name' do
+
+#   student = db.execute("SELECT * FROM students WHERE name=?", [params[:name]]) [0]
+#   student.each do |student|
+#     if student[:name].downcase.include?(params[:name].downcase)
+#       student.to_s
+#     else
+#     "sorry" 
+#     end
+#   end
+# end
