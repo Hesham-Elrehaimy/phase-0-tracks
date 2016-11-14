@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Students Search</title>
+</head>
+<body>
+<h1>Search by age:</h1>
+<ul>
+    <% @students_search.each do |student| %>
+     <% if student['age'] <= 45 %>
+      <li>	<%= student['name'] %>, <%= student['age'] %></li>
+     <% end %>
+
+    <% end %>
+</ul>
+</body>
+</html>
